@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const pagination = require('discord.js-pagination');
-const client = new Discord.Client({disableEveryone: true},{
+const client = new Discord.Client({
  presence: {
   status: 'online',
   activity: {
