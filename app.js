@@ -112,9 +112,9 @@ client.on('message', message => {
     var slap = message.mentions.members.first();
     var author = message.author.toString()
     const embed = new Discord.MessageEmbed()
-    got('http://ram.gamearoo.top/api/hug').then(response => {
+    got('https://purrbot.site/api/img/sfw/hug/gif').then(response => {
         let content = JSON.parse(response.body);
-        let gif = content.url;
+        let gif = content.link;
         embed.setDescription(`${author} Hugged ${slap}`)
         embed.setImage(gif)
         embed.setColor('RANDOM')
