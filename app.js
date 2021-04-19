@@ -112,6 +112,9 @@ client.on('message', message => {
     var slap = message.mentions.members.first();
     var author = message.author.toString()
     const embed = new Discord.MessageEmbed()
+    if (`${slap}` === "undefined") {
+      message.channel.send(`enter a valid user ${author}!`)
+    } else {
     got('https://purrbot.site/api/img/sfw/hug/gif').then(response => {
         let content = JSON.parse(response.body);
         let gif = content.link;
@@ -122,7 +125,7 @@ client.on('message', message => {
         message.channel.send(embed);
           })
       }
-  });
+}});
 
 client.on('message', message => {
 if (message.content === "?gn") {
