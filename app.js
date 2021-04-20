@@ -40,8 +40,8 @@ client.on('message', message => {
 
 client.on('message', (msg) => {
 	if (msg.content === '?wench') {
-    if(message.author.id === client.user.id) return;
-    if(message.author.bot) return;
+    if(msg.author.id === client.user.id) return;
+    if(msg.author.bot) return;
 		const WenchEmbed = new Discord.MessageEmbed()
 	.setColor('RANDOM')
 	.setTitle('Silence Wench')
@@ -53,8 +53,8 @@ client.on('message', (msg) => {
 
 client.on('message', (msg) => {
 	if (msg.content === '?help') {
-    if(message.author.id === client.user.id) return;
-    if(message.author.bot) return;
+    if(msg.author.id === client.user.id) return;
+    if(msg.author.bot) return;
 	const page1 = new Discord.MessageEmbed()
     .setColor('RANDOM')
     .setTitle('General Use')
@@ -199,13 +199,13 @@ const embed = new Discord.MessageEmbed()
       embed.setImage(nsfwImage)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${msg.author.tag}`)
-      if(message.author.id === client.user.id) return;
-      if(message.author.bot) return;
+      if(msg.author.id === client.user.id) return;
+      if(msg.author.bot) return;
       msg.channel.send(embed);
         })
     } else {
-      if(message.author.id === client.user.id) return;
-      if(message.author.bot) return;
+      if(msg.author.id === client.user.id) return;
+      if(msg.author.bot) return;
     	msg.channel.send("cannot post here, This channel is not NSFW.");
     }
 }});
@@ -226,21 +226,21 @@ const embed = new Discord.MessageEmbed()
       embed.setImage(nsfwImage)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${msg.author.tag}`)
-      if(message.author.id === client.user.id) return;
-      if(message.author.bot) return;
+      if(msg.author.id === client.user.id) return;
+      if(msg.author.bot) return;
       msg.channel.send(embed);
         })
     } else {
-      if(message.author.id === client.user.id) return;
-      if(message.author.bot) return;
+      if(msg.author.id === client.user.id) return;
+      if(msg.author.bot) return;
     	msg.channel.send("cannot post here, This channel is not NSFW.");
     }
 }});
 
 client.on('message', (msg) => {
 	if (msg.content === '?fuck') {
-    if(message.author.id === client.user.id) return;
-    if(message.author.bot) return;
+    if(msg.author.id === client.user.id) return;
+    if(msg.author.bot) return;
 		msg.channel.send('UwU  Harder Daddy <:Pink_Phallic_Object:828719960724865034><:white_milk:831127005117677589>')
 	}
 });
