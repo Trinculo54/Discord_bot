@@ -403,7 +403,7 @@ client.on('message', message => {
       if(message.author.bot) return;
       var slap = message.mentions.members.first();
       var author = message.author.toString()
-      var special_gifs = ["https://discord.trinculo54.online/API/gifs/DE213030-B0CF-4614-A244-238D41D23402.gif", "https://discord.trinculo54.online/API/gifs/9F946509-11AA-49E7-8364-D13210DDF797.gif", "https://discord.trinculo54.online/API/gifs/95674E67-AB2E-4700-9D37-C441BDE72F8B.gif", "https://discord.trinculo54.online/API/gifs/7BE0E684-E39E-4CE2-8677-F1285B9B2F83.gif", "https://discord.trinculo54.online/API/gifs/31002B99-A096-41DF-897E-E158B8D69813.gif"]
+      var special_gifs = ["https://discord.trinculo54.online/API/gifs/DE213030-B0CF-4614-A244-238D41D23402.gif", "https://discord.trinculo54.online/API/gifs/7EAD3816-A1BF-4D69-89B9-CFA4CB7A2E6F.gif", "https://discord.trinculo54.online/API/gifs/95674E67-AB2E-4700-9D37-C441BDE72F8B.gif", "https://discord.trinculo54.online/API/gifs/7BE0E684-E39E-4CE2-8677-F1285B9B2F83.gif", "https://discord.trinculo54.online/API/gifs/31002B99-A096-41DF-897E-E158B8D69813.gif"]
       var randomGIF = special_gifs[Math.floor(Math.random() * special_gifs.length)];
       const embed = new Discord.MessageEmbed()
       if (`${slap}` === "undefined") {
