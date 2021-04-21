@@ -22,7 +22,6 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content.includes("?joke")) {
-    if(message.author.id === client.user.id) return;
     if(message.author.bot) return;
     const embed = new Discord.MessageEmbed()
     got('https://v2.jokeapi.dev/joke/Miscellaneous,Dark?blacklistFlags=nsfw,sexist&type=single').then(response => {
@@ -40,7 +39,6 @@ client.on('message', message => {
 
 client.on('message', (msg) => {
 	if (msg.content === '?wench') {
-    if(msg.author.id === client.user.id) return;
     if(msg.author.bot) return;
 		const WenchEmbed = new Discord.MessageEmbed()
 	.setColor('RANDOM')
@@ -53,7 +51,6 @@ client.on('message', (msg) => {
 
 client.on('message', (msg) => {
 	if (msg.content === '?help') {
-    if(msg.author.id === client.user.id) return;
     if(msg.author.bot) return;
 	const page1 = new Discord.MessageEmbed()
     .setColor('RANDOM')
@@ -101,9 +98,11 @@ client.on('message', (msg) => {
     const page5 = new Discord.MessageEmbed()
     .setColor('RANDOM')
     .setTitle('Support')
-    .setDescription('Submit any sugesstions erros or questions')
-    .addField('[Email us here](http://example.com)')
-
+    .setDescription('If you have any Submit any sugesstions, errors, or questions')
+    .addFields(
+	    {name: 'Email me at', value: 'jameswporter16@gmail.com'}
+    )
+    
     const pages = [
         page1,
         page2,
@@ -126,7 +125,6 @@ client.on('message', message => {
     var author = message.author.toString()
     const embed = new Discord.MessageEmbed()
     if (`${slap}` === "undefined") {
-      if(message.author.id === client.user.id) return;
       if(message.author.bot) return;
       message.channel.send(`enter a valid user ${author}!`)
     } else {
@@ -156,7 +154,6 @@ if (message.content === "?gn") {
       embed.setImage(gif)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -175,7 +172,6 @@ if (message.content === "?gm") {
       embed.setImage(gif)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -199,13 +195,11 @@ const embed = new Discord.MessageEmbed()
       embed.setImage(nsfwImage)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${msg.author.tag}`)
-      if(msg.author.id === client.user.id) return;
       if(msg.author.bot) return;
       msg.channel.send(embed);
         })
     } else {
-      if(msg.author.id === client.user.id) return;
-      if(msg.author.bot) return;
+      if(message.author.bot) return;
     	msg.channel.send("cannot post here, This channel is not NSFW.");
     }
 }});
@@ -226,12 +220,10 @@ const embed = new Discord.MessageEmbed()
       embed.setImage(nsfwImage)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${msg.author.tag}`)
-      if(msg.author.id === client.user.id) return;
-      if(msg.author.bot) return;
+      if(message.author.bot) return;
       msg.channel.send(embed);
         })
     } else {
-      if(msg.author.id === client.user.id) return;
       if(msg.author.bot) return;
     	msg.channel.send("cannot post here, This channel is not NSFW.");
     }
@@ -239,7 +231,6 @@ const embed = new Discord.MessageEmbed()
 
 client.on('message', (msg) => {
 	if (msg.content === '?fuck') {
-    if(msg.author.id === client.user.id) return;
     if(msg.author.bot) return;
 		msg.channel.send('UwU  Harder Daddy <:Pink_Phallic_Object:828719960724865034><:white_milk:831127005117677589>')
 	}
@@ -261,8 +252,7 @@ if (message.content === "?meme") {
       embed.setURL(`${memeUrl}`)
       embed.setImage(memeImage)
       embed.setColor('RANDOM')
-      embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments} Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
+      embed.setFooter(`👍 ${memeUpvotes} 💬 ${memeNumComments} | Requested by ${message.author.tag}`)
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -285,8 +275,7 @@ client.on('message', message => {
       embed.setURL(`${memeUrl}`)
       embed.setImage(memeImage)
       embed.setColor('RANDOM')
-      embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments} Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
+      embed.setFooter(`👍 ${memeUpvotes} 💬 ${memeNumComments} | Requested by ${message.author.tag}`)
       if(message.author.bot) return;
       message.channel.send(embed);
           })
@@ -309,8 +298,7 @@ if (message.content === "?meow") {
       embed.setURL(`${memeUrl}`)
       embed.setImage(memeImage)
       embed.setColor('RANDOM')
-      embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments} Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
+      embed.setFooter(`👍 ${memeUpvotes} 💬 ${memeNumComments} | Requested by ${message.author.tag}`)
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -333,8 +321,7 @@ if (message.content === "?dragon") {
       embed.setURL(`${memeUrl}`)
       embed.setImage(memeImage)
       embed.setColor('RANDOM')
-      embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments} Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
+      embed.setFooter(`👍 ${memeUpvotes} 💬 ${memeNumComments} | Requested by ${message.author.tag}`)
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -357,8 +344,7 @@ if (message.content === "?aww") {
       embed.setURL(`${memeUrl}`)
       embed.setImage(memeImage)
       embed.setColor('RANDOM')
-      embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments} Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
+      embed.setFooter(`👍 ${memeUpvotes} 💬 ${memeNumComments} | Requested by ${message.author.tag}`)
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -371,7 +357,6 @@ if (message.content.includes("?slap")) {
 	var author = message.author.toString()
   const embed = new Discord.MessageEmbed()
   if (`${slap}` === "undefined") {
-    if(message.author.id === client.user.id) return;
     if(message.author.bot) return;
     message.channel.send(`enter a valid user ${author}!`)
   } else {
@@ -383,7 +368,6 @@ if (message.content.includes("?slap")) {
       embed.setImage(gif)
       embed.setColor('RANDOM')
       embed.setFooter(`Requested by ${message.author.tag}`)
-      if(message.author.id === client.user.id) return;
       if(message.author.bot) return;
       message.channel.send(embed);
         })
@@ -397,7 +381,6 @@ client.on('message', message => {
     const embed = new Discord.MessageEmbed()
     if (`${slap}` === "undefined") {
       if(message.author.bot) return;
-      if(message.author.id === client.user.id) return;
       message.channel.send(`enter a valid user ${author}!`)
     } else {
     got('https://purrbot.site/api/img/sfw/kiss/gif').then(response => {
@@ -408,7 +391,6 @@ client.on('message', message => {
         embed.setImage(gif)
         embed.setColor('RANDOM')
         embed.setFooter(`Requested by ${message.author.tag}`)
-        if(message.author.id === client.user.id) return;
         if(message.author.bot) return;
         message.channel.send(embed);
           })
@@ -418,10 +400,11 @@ client.on('message', message => {
   client.on('message', message => {
     if (message.content.includes('?fuck --gay')) {
       if (message.channel.nsfw) {
-      if(message.author.id === client.user.id) return;
       if(message.author.bot) return;
       var slap = message.mentions.members.first();
       var author = message.author.toString()
+      var special_gifs = ["https://discord.trinculo54.online/API/gifs/DE213030-B0CF-4614-A244-238D41D23402.gif", "https://discord.trinculo54.online/API/gifs/9F946509-11AA-49E7-8364-D13210DDF797.gif", "https://discord.trinculo54.online/API/gifs/95674E67-AB2E-4700-9D37-C441BDE72F8B.gif", "https://discord.trinculo54.online/API/gifs/7BE0E684-E39E-4CE2-8677-F1285B9B2F83.gif", "https://discord.trinculo54.online/API/gifs/31002B99-A096-41DF-897E-E158B8D69813.gif"]
+      var randomGIF = special_gifs[Math.floor(Math.random() * special_gifs.length)];
       const embed = new Discord.MessageEmbed()
       if (`${slap}` === "undefined") {
         message.channel.send(`enter a valid user ${author}!`)
@@ -430,14 +413,13 @@ client.on('message', message => {
           let content = JSON.parse(response.body);
           let gif = content.link;
           embed.setDescription(`${author} Fucked ${slap}`)
-          embed.setImage(gif)
+          embed.setImage(randomGIF)
           embed.setColor('RANDOM')
           embed.setFooter(`Requested by ${message.author.tag}`)
           message.channel.send(embed);
             })
         }
   } else {
-    if(message.author.id === client.user.id) return;
     if(message.author.bot) return;
     message.channel.send("cannot post here, This channel is not NSFW.");
   }
