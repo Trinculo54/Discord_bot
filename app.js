@@ -243,9 +243,9 @@ client.on('message', (msg) => {
 		embed.setTitle(`Sadness`)
       		embed.setImage(`https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif`)
       		embed.setColor('RANDOM')
-      		embed.setFooter(`Requested by ${message.author.tag}`)
-      		if(message.author.bot) return;
-      		message.channel.send(embed);
+      		embed.setFooter(`Requested by ${msg.author.tag}`)
+      		if(msg.author.bot) return;
+      		msg.channel.send(embed);
 	}
 });
 
