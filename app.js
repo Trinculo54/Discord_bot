@@ -1,15 +1,7 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const pagination = require('discord.js-pagination');
-const client = new Discord.Client({disableEveryone: true},{
- presence: {
-  status: 'online',
-  activity: {
-   name: '?help',
-   type: 'PLAYING',
-  },
- },
-});
+const client = new Discord.Client({disableEveryone: true});
 const got = require('got');
 
 const prefix = '?';
@@ -18,6 +10,13 @@ client.login(process.env.BOT_TOKEN)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    bot.user.setStatus('available')
+      bot.user.setPresence({
+          game: {
+              name: 'With Your Mom',
+              type: "PLAYING",
+          }
+      });
 });
 
 client.on('message', message => {
