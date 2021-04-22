@@ -236,6 +236,19 @@ client.on('message', (msg) => {
 	}
 });
 
+client.on('message', (msg) => {
+	if (msg.content === '?sad') {
+    	if(msg.author.bot) return;
+		const embed = new Discord.MessageEmbed()
+		embed.setTitle(`Sadness`)
+      		embed.setImage(`https://media.giphy.com/media/BEob5qwFkSJ7G/giphy.gif`)
+      		embed.setColor('RANDOM')
+      		embed.setFooter(`Requested by ${message.author.tag}`)
+      		if(message.author.bot) return;
+      		message.channel.send(embed);
+	}
+});
+
 client.on('message', message => {
 if (message.content === "?meme") {
   const embed = new Discord.MessageEmbed()
