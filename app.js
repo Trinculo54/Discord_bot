@@ -10,13 +10,13 @@ client.login(process.env.BOT_TOKEN)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    bot.user.setStatus('available')
-      bot.user.setPresence({
-          game: {
-              name: 'With Your Mom',
-              type: "PLAYING",
-          }
-      });
+    client.user.setPresence({
+        status: "online",  // You can show online, idle... Do not disturb is dnd
+        game: {
+            name: "!help",  // The message shown
+            type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
+        }
+    });
 });
 
 client.on('message', message => {
